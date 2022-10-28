@@ -732,7 +732,7 @@
       gsap.from("#main-visual .title .char", {
         y: -200,
         opacity: 0,
-        duration: 1.5,
+        // duration: 1.5,
         ease: "bounce",
         stagger: {
           //each: 0.05,
@@ -744,9 +744,10 @@
       const header = $("#header");
       const gnb = $("#gnb");
       const depth01 = $("#gnb .depth01");
-      const btnAll = $("#header .btn-all");
       const depth02 = $("#gnb .depth02");
+      const btnAll = $("#header .btn-all");
 
+      // 모바일.ver 사이드바
       btnAll.on("click", function () {
         gnb.toggleClass("on");
         $(this).toggleClass("on");

@@ -32,7 +32,6 @@ button {
   width: 100%;
   z-index: 99;
   top: 0;
-  transition: all 0.5s ease;
   height: 70px;
 }
 #header.on {
