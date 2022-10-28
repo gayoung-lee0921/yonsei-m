@@ -58,7 +58,15 @@ button {
   }
   #gnb {
     background-color: #fff;
+    width: 100vw;
     height: 100vh;
+    position: fixed;
+
+    left: 100%;
+    transition: all 0.25s ease;
+    &.on {
+      left: 0;
+    }
     .list {
       > li {
         position: relative;

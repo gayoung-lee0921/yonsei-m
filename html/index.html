@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minium-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="../images/common/favicon.png" type="image/x-icon" />
     <title>연세대학교 이과대학</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/svg.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/main.css" />
+
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/08ebc00fc6.js" crossorigin="anonymous"></script>
     <script src="../js/jquery-3.6.1.min.js"></script>
@@ -740,7 +741,16 @@
       });
 
       const header = $("#header");
+      const gnb = $("#gnb");
       const depth01 = $("#gnb .depth01");
+      const btnAll = $("#header .btn-all");
+      const depth02 = $("#gnb .depth02");
+
+      btnAll.on("click", function () {
+        gnb.toggleClass("on");
+        $(this).toggleClass("on");
+        depth02.stop().delay(250).slideUp();
+      });
       depth01.on("click", function (e) {
         e.preventDefault();
         const depth02 = $(this).next();
