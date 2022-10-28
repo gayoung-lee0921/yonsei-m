@@ -221,7 +221,7 @@ button {
 #footer {
   background-color: #222;
   color: rgba(255, 255, 255, 0.5);
-  padding: 70px 0;
+  padding: 50px 20px;
 }
 #footer .container {
   width: 1840px;
@@ -249,12 +249,11 @@ button {
   font-weight: 700;
 }
 #footer .addr-box .family-site {
-  position: absolute;
-  right: 0;
-  bottom: 30px;
+  margin-top: 20px;
 }
 #footer .util-box {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 #footer .util-box .util {
@@ -266,6 +265,7 @@ button {
 }
 #footer .util-box .copyright {
   font-size: 14px;
+  margin-top: 20px;
 }
 
 .family-site {
@@ -290,9 +290,9 @@ button {
   position: absolute;
   bottom: 40px;
   margin-bottom: -1px;
-  opacity: 0;
-  transition: all 0.25s ease;
   pointer-events: none;
+  display: none;
+  z-index: 1;
 }
 .family-site ul li {
   margin-top: -1px;

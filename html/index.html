@@ -308,6 +308,7 @@
             </ul>
           </div>
         </div>
+        <a href="" class="more">MORE DETAIL</a>
       </div>
     </section>
     <!-- research end -->
@@ -702,7 +703,7 @@
       });
 
       new Swiper("#research .mask", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
           prevEl: "#research .btn-prev",
@@ -760,6 +761,20 @@
         siblingsdepth01.removeClass("on");
         siblings.stop().slideUp();
         depth02.stop().slideToggle();
+      });
+
+      const fundList = $(".fund-list li");
+      fundList.on("click", function () {
+        const siblings = $(this).siblings();
+        $(this).addClass("on");
+        siblings.removeClass("on");
+      });
+
+      const familySite = $(".family-site ");
+      const familySiteBtn = $(".family-site button");
+      familySiteBtn.on("click", function () {
+        // familySite.toggleClass("on");
+        familySite.find("ul").stop().slideToggle(250);
       });
     </script>
   </body>
